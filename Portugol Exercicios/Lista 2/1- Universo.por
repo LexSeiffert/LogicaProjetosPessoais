@@ -2,8 +2,8 @@ programa
 {
 	
 	funcao inicio()
-	{const inteiro universo = 8
-	escreva ("Qual o significado da vida, do universo e tudo mais?", universo)
+	{const inteiro universo = 42
+	escreva ("A resposta é ", universo, ".\n\n\n")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -11,7 +11,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 75; 
+ * @POSICAO-CURSOR = 76; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

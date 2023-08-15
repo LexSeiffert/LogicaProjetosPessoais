@@ -16,59 +16,57 @@ Multiplicação: -10
 Divisão: -2.5
 */
 programa
-{inclua biblioteca Tipos --> t
-	
+{
+	inclua biblioteca Tipos --> t
 	funcao inicio()
-	{cadeia n1, n2
-	inteiro nn1, nn2
-	nn1 = 0
-	nn2 = 0
-	
-	escreva("Digite o primeiro número: ")
-	leia(n1)
-	limpa()
-	se(t.cadeia_e_inteiro(n1, 10))
 	{
-		nn1 = t.cadeia_para_inteiro(n1, 10)
-	} senao {
-		escreva("Não é permitido o uso de letras! \n")
-		
-	}
+		cadeia n1, n2
+		inteiro nn1, nn2
+		inteiro i = 0
+		nn1 = 0
+		nn2 = 0
 	
-	escreva("Digite o segundo número: ")
-	leia(n2)
-	limpa()
-	se(t.cadeia_e_inteiro(n2, 10))
-	{
-		nn2 = t.cadeia_para_inteiro(n2, 10)
-	} senao {
-		escreva("Não é permitido o uso de letras! \n")
-		
-	}
-	escreva("Soma: ")
-	escreva(nn1 + nn2)
-
-	escreva("\nSubtração: ")
-	escreva(nn1 - nn2)
-
-	escreva("\nMultiplicação: ")
-	escreva(nn1 * nn2)
-
-	se(nn2==0)
-	{escreva("\nDivisão: ")
-		escreva("Não é possivel dividir por 0!")}
-
-	senao{escreva("\nDivisão: ")
-	escreva(nn1 / nn2)}
+		escreva("Digite o primeiro número: ")
+		leia(n1)
+		limpa()
 	
+		se (t.cadeia_e_inteiro(n1, 10)) {
+			nn1 = t.cadeia_para_inteiro(n1, 10)
+			escreva("Digite o segundo número: ")
+			leia(n2)
+			limpa()
+			
+			se(t.cadeia_e_inteiro(n2, 10)){
+				nn2 = t.cadeia_para_inteiro(n2,10)
+				escreva("Soma: ", nn1 + nn2, "\nSubtração: ", nn1 - nn2, "\nMultiplicação: ", nn1 * nn2)
+				
+				se(nn2==0){
+					escreva("\nDivisão: ")
+					escreva("Não é possivel dividir por 0!")
+				}
+				senao{
+					escreva("\nDivisão: ", nn1 / nn2)
+				}
+			}
+			senao{
+				 escreva("Não é permitido o uso de letras!\n")
+				 inicio()
+			}
+		}
+		senao{
+			escreva("Não é permitido o uso de letras!\n")
+			inicio()
+		}
+			
 	}
 }
+
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 910; 
+ * @POSICAO-CURSOR = 883; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
